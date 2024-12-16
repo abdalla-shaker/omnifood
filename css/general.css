@@ -25,8 +25,8 @@ Paragraph default: 1.6
 --- 02 COLORS
 
 - Primary: #e67e22
-- Tints: #fdf2e9, #fae5d3,
-- Shades: #cf711f
+- Tints: #fdf2e9, #fae5d3, #eb984e
+- Shades: #cf711f, #45260A,
 - Accents:
 - Grays: #555, #333, #6f6f6f (lightest grey allowed on #fdf2e9)
 
@@ -166,6 +166,7 @@ body {
   color: var(--primary-color);
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -176,6 +177,11 @@ body {
 
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  /* ONLY NECESSARY FOR THE .BTN */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   transition: all 0.3s ease-in-out;
 }
@@ -217,6 +223,23 @@ body {
 .link:active {
   color: var(--primary-shade-color);
   border-color: transparent;
+}
+
+.btn--form {
+  background-color: var(--primary-shade-2-color);
+  color: var(--primary-tint-color);
+  align-self: end;
+  padding: 1.2rem 2.4rem;
+}
+
+.btn--form:hover {
+  background-color: var(--white-color);
+  color: var(--very-dark-gray-color);
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 strong {
